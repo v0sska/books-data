@@ -1,6 +1,7 @@
 import express from 'express';
 import  router  from './routers';
 import { connectDB } from './configs/mongoDbConfig';
+import { fillBookData } from './basicData';
 
 const app = express();
 
@@ -13,6 +14,13 @@ connectDB().then(() => {
   }).catch((error) => {
     console.error('Error initializing database', error);
   });
+
+fillBookData().then(() => {
+    console.log('Data loaded to db');
+  }).catch((error) => {
+    console.error('Error sended a data', error);
+  });
+
 
 app.use('/', router);
 
