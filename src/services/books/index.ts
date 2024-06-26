@@ -76,5 +76,11 @@ import {
  };
 
  const checkRequirmentFields = (book: BooksDto): boolean => {
-    return book.title !== '' && book.publishedDate.date !== null && book.longDescription !== '' && book.status !== '' && book.authors.length > 0;
- }
+    return (
+        book.title != null && book.title.trim() !== '' && 
+        book.publishedDate?.date != null && 
+        book.longDescription != null && book.longDescription.trim() !== '' && 
+        book.status != null && book.status.trim() !== '' && 
+        book.authors != null && book.authors.length > 0
+    );
+};
