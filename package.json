@@ -1,0 +1,27 @@
+{
+  "name": "books-data",
+  "version": "1.0.0",
+  "description": "techical task for Inforce",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "ts-node src/server.ts",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js"
+  },
+  "keywords": [],
+  "author": "mqqqmi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-status": "^1.7.4",
+    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4"
+  }
+}
