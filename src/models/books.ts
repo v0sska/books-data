@@ -1,6 +1,7 @@
-import { Schema, model } from "mongoose";
+import { Schema, model} from "mongoose";
 
 export interface IBooks{
+    _id?: string;
     title: string;
     pageCount?: number;
     publishedDate: {

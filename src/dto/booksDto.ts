@@ -1,4 +1,5 @@
 export interface BooksDto {
+    _id: string;
     title: string;
     pageCount?: number;
     publishedDate: {
