@@ -13,7 +13,7 @@ export interface IBooks{
     authors: string[];
 }
 
-const booksShema = new Schema<IBooks>({
+const booksSchema = new Schema<IBooks>({
     title: {type: String, required: true},
     pageCount: Number,
     publishedDate: {
@@ -26,6 +26,6 @@ const booksShema = new Schema<IBooks>({
     authors: {type: [String], required: true}
 });
 
-const Books = model<IBooks>('Books', booksShema);
+const Books = model<IBooks>('Books', booksSchema);
 
 export default Books;
