@@ -1,3 +1,5 @@
+import { Status } from "../enums/status";
+
 export interface BooksDto {
     _id: string;
     title: string;
@@ -8,6 +10,6 @@ export interface BooksDto {
     thumbnailUrl?: string;
     shortDescription?: string;
     longDescription: string;
-    status: string;
+    status: Status;
     authors: string[];
 }

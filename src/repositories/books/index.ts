@@ -1,9 +1,10 @@
 import Books, {IBooks} from "../../models/books";
 
-export const addBook = async (book: IBooks): Promise<void> => {
+export const addBook = async (book: IBooks): Promise<string | undefined> => {
     const newBook = new Books(book);
     try {
         await newBook.save();
+        return newBook._id;
     } catch (err) {
         console.error('Error adding book:', err);
     }

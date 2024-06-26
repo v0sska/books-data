@@ -22,7 +22,7 @@ export const listBooks = async (req: Request, res: Response) => {
     }
 }
 
-export const listBook = async (req: Request, res: Response) => {
+export const getBookById = async (req: Request, res: Response) => {
     try {
         const book = await listBookById(req.params.id);
         if (!book) {
@@ -38,7 +38,7 @@ export const listBook = async (req: Request, res: Response) => {
 export const deleteBook = async (req: Request, res: Response) => {
     try {
         await removeBookById(req.params.id);
-        res.status(httpStatus.NO_CONTENT).send();
+        res.status(httpStatus.NO_CONTENT).send("book is deleted!");
     } catch (error) {
         res.status(httpStatus.INTERNAL_SERVER_ERROR).send(error);
     }
@@ -46,8 +46,8 @@ export const deleteBook = async (req: Request, res: Response) => {
 
 export const updateBookById = async (req: Request, res: Response) => {
     try {
-        const bookId = await changeBookById(req.params.id, req.body as BooksDto);
-        res.status(httpStatus.CREATED).send(bookId);
+        await changeBookById(req.params.id, req.body as BooksDto);
+        res.status(httpStatus.OK).send("Books is updated!");
     } catch (error) {
         res.status(httpStatus.INTERNAL_SERVER_ERROR).send(error);
     }

@@ -1,10 +1,10 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 
-const connectDB = async () => {
+export const connectDB = async () => {
   const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017';
   const dbName = process.env.DB_NAME || 'books';
   const user = process.env.MONGO_INITDB_ROOT_USERNAME || 'root';
-  const pass = process.env.MONGO_INITDB_ROOT_PASSWORD || 'example';
+  const pass = process.env.MONGO_INITDB_ROOT_PASSWORD || 'pass';
 
   const options: ConnectOptions = {
     user,
@@ -20,5 +20,3 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
-export default connectDB;
