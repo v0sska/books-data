@@ -1,23 +1,47 @@
 This project is created for techical task and provide basics CRUD funcionality.
 
-for start project type in command line for starting MongoDB:
+for start project type in terminal line for starting MongoDB:
   
               docker-compose up 
 
-example of adding a book: 
+After this type in terminal for start project:
 
-          {
-              "title": "Example Book",
-              "pageCount": 350,
-              "publishedDate": {
-                  "date": "2023-01-01T00:00:00.000Z"
-              },
-              "thumbnailUrl": "http://example.com/thumbnail.jpg",
-              "shortDescription": "This is a short description of the example book.",
-              "longDescription": "This is a long description of the example book. It goes into more detail about the book's content and features.",
-              "status": "PUBLISHED",
-              "authors": ["Author One", "Author Two"]
-          }
+            npm start or npm build
+
+example of adding a book: 
+        {
+         "title": "1984",      
+          "pageCount": 328,
+          "publishedDate": {
+            "date": "1949-06-08T00:00:00.000Z"
+          },
+          "thumbnailUrl": "http://example.com/1984.jpg",
+          "shortDescription": "A novel by George Orwell.",
+          "longDescription": "1984, dystopian social science fiction novel and cautionary tale, written by the English writer George Orwell. It was                               published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+          "status": "CANCELED",
+          "authors": [
+          "George Orwell"
+          ]
+        }
+
 
 and example of list of books: 
+
+            {
+                    "_id": "667c12194c14a1eaf8ddefff",
+                    "title": "1984",
+                    "pageCount": 328,
+                    "publishedDate": {
+                        "date": "1949-06-08T00:00:00.000Z"
+                    },
+                    "thumbnailUrl": "http://example.com/1984.jpg",
+                    "shortDescription": "A novel by George Orwell.",
+                    "longDescription": "1984, dystopian social science fiction novel and cautionary tale, written by the English writer George Orwell. It was                               published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+                    "status": "CANCELED",
+                    "authors": [
+                        "George Orwell"
+                    ]
+                }
+
+Also, when the project starts, the method that fills the database is called
 
